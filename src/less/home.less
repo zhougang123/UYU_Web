@@ -1,0 +1,171 @@
+@import "./common/common";
+
+/* ==================注册-首页============================================================ */
+
+
+/*表格单行样式-----------------------------------------------*/
+
+dl.hang {
+    width: 100%;
+    padding: 0.2rem @padding 0.2rem 0;
+    box-sizing: border-box;
+    border-top: 1px solid @border_color;
+    line-height: 1rem;
+    &:nth-child(1) {
+        border: 0;
+    }
+    &:after {
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        overflow: hidden;
+    }
+    dt {
+        float: left;
+        width: 92%;
+        font-size: 16px;
+        line-height: .5rem;
+        span.grey {
+            font-size: 13px;
+        }
+    }
+    dd {
+        float: right;
+        width: 8%;
+        text-align: right;
+        line-height: 1rem;
+        span.arrow {
+            display: inline-block;
+            background: url('@{images}/ic_next.png') center center no-repeat;
+            background-size: 0.3rem auto;
+            width: 0.3rem;
+            height: 0.6rem;
+            position: relative;
+            top: .2rem;
+        }
+    }
+}
+
+section.section_top {
+    width: 100%;
+    padding: 0.2rem 0 0;
+    background: white;
+    margin-bottom: .3rem;
+    p.title {
+        text-align: center;
+        font-size: 14px;
+        line-height: .6rem;
+        margin-bottom: .2rem;
+    }
+    .ul_top {
+        width: 100%;
+        text-align: center;
+        li {
+            width: 49%;
+            float: left;
+            padding: 0.1rem 0;
+            font-size: 14px;
+            line-height: 0.8rem;
+            border-right: 1px solid @border_color;
+            &:nth-child(2) {
+                border-right: 0px;
+                float: right;
+            }
+            span.span_num {
+                font-size: 24px;
+                padding-left: 12px;
+                position: relative;
+                top: .08rem;
+            }
+        }
+    }
+    p.notice {
+        width: 100%;
+        padding: 0 @padding 0 40px;
+        margin-top: .3rem;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: white;
+        background: url('@{images}/ic_notice.png') @padding .14rem no-repeat @orange;
+        background-size: 0.5rem auto;
+        line-height: .8rem;
+        position: relative;
+        span.right_arrow {
+            display: inline-block;
+            position: absolute;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 0.4rem;
+            background: white;
+            top: 0.2rem;
+            right: @padding;
+            i {
+                display: inline-block;
+                background: url('@{images}/arrow_ro.png') center center no-repeat;
+                background-size: 0.4rem auto;
+                width: 0.24rem;
+                height: 0.24rem;
+            }
+        }
+    }
+}
+
+section.section_mid {
+    width: 100%;
+    padding: 0 0 0 @padding;
+    box-sizing: border-box;
+    border-top: 1px solid @border_color;
+    border-bottom: 1px solid @border_color;
+    background: white;
+    margin-bottom: .3rem;
+}
+
+section.section_sigle {
+    width: 100%;
+    padding: 0 0 0 @padding;
+    box-sizing: border-box;
+    border-top: 1px solid @border_color;
+    border-bottom: 1px solid @border_color;
+    background: white;
+    margin-bottom: .3rem;
+    dl.hang {
+        &.sigle_hang {
+            padding: 0.1rem @padding 0.1rem 0;
+            dt {
+                line-height: 1rem;
+            }
+        }
+        dt {
+            position: relative;
+            span.right_arrow {
+                display: inline-block;
+                position: absolute;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 0.45rem;
+                background: @orange;
+                top: 0.25rem;
+                right: 0;
+                display: none;
+                i {
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+        }
+        &.has_see{
+            dt{
+                span.right_arrow{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

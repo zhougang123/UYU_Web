@@ -1,0 +1,23 @@
+{
+  "name": "qyb_new",
+  "version": "1.0.0",
+  "description": "钱方签约宝改版注册模块h5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.qfpay.net:client/QYB_Web_Registe.git"
+  },
+  "author": "ZG",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-postcss": "^6.3.0",
+    "postcss-px2rem": "^0.3.0"
+  }
+}

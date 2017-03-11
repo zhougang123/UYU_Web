@@ -1,0 +1,61 @@
+@import "./common/common";
+@import "reg";
+/* ==================注册-费率页============================================================ */
+@rate_title_black : #2F323A;
+
+#rate_content{
+  background-color: white;
+  font-size: @font_size;
+  color: @rate_title_black;
+  margin-top: @padding;
+  border-top: solid @border_color 1px;
+  border-bottom: solid @border_color 1px;
+  box-sizing: border-box;
+  /*no*/
+
+  .rate_section{
+    :first-child {
+      border-top: none;
+    }
+  }
+
+  .rate_cell{
+    height: 1.125rem;
+    line-height: 1.125rem;
+    margin-left: @padding;
+    padding-right: @padding;
+    /*no*/
+    border-top: solid @border_color 1px;
+    /*no*/
+
+    dt{
+      float: left;
+      width: 50%;
+
+      img{
+        vertical-align: middle;
+        width: 0.55rem;
+        margin-right: 0.125rem;
+      }
+
+      p{
+        display: inline-block;
+      }
+    }
+    dd{
+      text-align: right;
+      float: right;
+      width: 50%;
+    }
+  }
+}
+
+.accessory_rig_img{
+  margin-left: 0.125rem;
+  /*no*/
+  display: inline-block;
+  width: 0.125rem;
+  height: 0.3rem;
+  background: url('@{images}/icon_cell_right.png') center center no-repeat;
+  background-size: 0.15rem auto;
+}
