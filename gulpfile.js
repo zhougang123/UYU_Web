@@ -73,15 +73,15 @@ gulp.task('copy_common', function () {
 });
 
 
-gulp.task('dist2qybdist', function () {
-    gulp.src("./dist/**/*.*")
-        .pipe(gulp.dest("/Users/mac/Documents/company_work/2016QF/qqqyyybbb/beijing_qyb/QYB_New_iOS/NearQYB/Register/qyb_web/dist"));
-})
+// gulp.task('dist2qybdist', function () {
+//     gulp.src("./dist/**/*.*")
+//         .pipe(gulp.dest("/Users/mac/Documents/company_work/2016QF/qqqyyybbb/beijing_qyb/QYB_New_iOS/NearQYB/Register/qyb_web/dist"));
+// })
+//
+// gulp.task('html2qybhtml', function () {
+//     gulp.src("./html/**/*.*")
+//         .pipe(gulp.dest("/Users/mac/Documents/company_work/2016QF/qqqyyybbb/beijing_qyb/QYB_New_iOS/NearQYB/Register/qyb_web/html"));
+// })
 
-gulp.task('html2qybhtml', function () {
-    gulp.src("./html/**/*.*")
-        .pipe(gulp.dest("/Users/mac/Documents/company_work/2016QF/qqqyyybbb/beijing_qyb/QYB_New_iOS/NearQYB/Register/qyb_web/html"));
-})
-
-gulp.task('default', ['less2css', 'copy_js', 'compress_img', 'dist2qybdist', 'html2qybhtml']);
+gulp.task('default', ['less2css', 'copy_js', 'compress_img']);
 

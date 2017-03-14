@@ -51,81 +51,95 @@ dl.hang {
 
 section.section_top {
     width: 100%;
-    padding: 0.2rem 0 0;
+    height: 2.4rem;
+    padding: 0 @padding 0 1.2rem;
     background: white;
-    margin-bottom: .3rem;
-    p.title {
-        text-align: center;
-        font-size: 14px;
-        line-height: .6rem;
-        margin-bottom: .2rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid @border_color;
+    .top_div{
+        float: left;
     }
-    .ul_top {
-        width: 100%;
-        text-align: center;
-        li {
-            width: 49%;
-            float: left;
-            padding: 0.1rem 0;
-            font-size: 14px;
+    .left_head_div{
+        width: 30%;
+        img{
+            margin: 0.2rem auto;
+            width: 2rem;
+            height: 2rem;
+            border: 1px solid grey;
+            border-radius:1rem;
+            -webkit-border-radius: 1rem;
+            overflow: hidden;
+        }
+    }
+    .right_head_info{
+        width: 40%;
+        padding: 0.4rem 0;
+        p{
+            height: 0.8rem;
+            text-align: left;
             line-height: 0.8rem;
-            border-right: 1px solid @border_color;
-            &:nth-child(2) {
-                border-right: 0px;
-                float: right;
-            }
-            span.span_num {
-                font-size: 24px;
-                padding-left: 12px;
-                position: relative;
-                top: .08rem;
-            }
         }
+
     }
-    p.notice {
-        width: 100%;
-        padding: 0 @padding 0 40px;
-        margin-top: .3rem;
-        box-sizing: border-box;
-        font-size: 14px;
-        color: white;
-        background: url('@{images}/ic_notice.png') @padding .14rem no-repeat @orange;
-        background-size: 0.5rem auto;
-        line-height: .8rem;
-        position: relative;
-        span.right_arrow {
-            display: inline-block;
-            position: absolute;
-            width: 0.4rem;
-            height: 0.4rem;
-            border-radius: 100%;
-            text-align: center;
-            line-height: 0.4rem;
-            background: white;
-            top: 0.2rem;
-            right: @padding;
-            i {
-                display: inline-block;
-                background: url('@{images}/arrow_ro.png') center center no-repeat;
-                background-size: 0.4rem auto;
-                width: 0.24rem;
-                height: 0.24rem;
-            }
-        }
+    span{
+        color: #FA9A09;
     }
 }
 
 section.section_mid {
     width: 100%;
-    padding: 0 0 0 @padding;
-    box-sizing: border-box;
     border-top: 1px solid @border_color;
     border-bottom: 1px solid @border_color;
     background: white;
     margin-bottom: .3rem;
+    .statistics{
+        width: 48.5%;
+        height: 2.4rem;
+        float: left;
+    }
+    .stat_info{
+        float: left;
+    }
+    .statistics_title{
+        width: 1.6rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        text-align: center;
+    }
+    .v_line_dev{
+        float: left;
+        width: 1%;
+        margin: 0 auto;
+    }
+    .line{
+        width: 1px;
+        height: 2rem;
+        margin: 0.2rem auto;
+        background-color: @border_color;
+    }
+    .statistics_num{
+        width: 3.2rem;
+        height: 2.4rem;
+        float: left;
+    }
+    .info_top{
+        border-bottom: 1px solid @border_color;
+    }
+    li{
+        width: 3.2rem;
+        height: 0.6rem;
+        text-align: center;
+        line-height: 0.6rem;
+    }
+
+    span{
+        color: #FA9A09;
+    }
+
+
 }
 
-section.section_sigle {
+section.section_bottom {
     width: 100%;
     padding: 0 0 0 @padding;
     box-sizing: border-box;
