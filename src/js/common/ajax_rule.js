@@ -1,28 +1,13 @@
-define(["add_bounced", "native"],function(add_bounced, native) {　
+define(["add_bounced"],function(add_bounced) {　
     //添加弹框
     add_bounced.add_bounced();
     //关闭弹框
     add_bounced.close_tip();
     //ajax规则
-    var baseUrl = "https://o.qfpay.com";
-    var uploadFileUrl = "https://o2.qfpay.com";
+    var baseUrl = "http://121.40.177.111:8182";
 
-    var userAgentQYB;
-    native.getDeviceInfo({}, function (cb) {
-        userAgentQYB = "QYB" + "/" + cb.appver + " " + cb.phonemodel + "/" + cb.os + " " + cb.network;
-    });
-    
     function ajax_rule(url, type, dataType, data, zhecengid, success_func, error_func) {
-        var requestUrl = '';
-        if (url !== "/util/v1/uploadfile")
-        {
-            requestUrl = baseUrl + url + '?' +'format=cors';
-        }else {
-            requestUrl = uploadFileUrl + url;
-        }
-        if (url.indexOf('https://qudao.qfpay.com') > -1){
-            requestUrl = url + '?' +'format=cors' ;
-        }
+        var requestUrl = baseUrl + url;
         $.ajax({
             url: requestUrl,
             type: type,
@@ -30,11 +15,6 @@ define(["add_bounced", "native"],function(add_bounced, native) {　
             data: data,
             beforeSend: function(xhr) {
                 $('#load_small_bg').show();
-                // $(zhecengid).show();
-                // $('#load_small_bg').show();
-                if (userAgentQYB !== null && userAgentQYB !== undefined){
-                    xhr.setRequestHeader("User-Agent", "userAgentQYB");
-                }
             },
             success: function(data) {
                 if (data.respcd != '0000') {

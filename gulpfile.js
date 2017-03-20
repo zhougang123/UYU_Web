@@ -73,15 +73,19 @@ gulp.task('copy_common', function () {
 });
 
 
-// gulp.task('dist2qybdist', function () {
-//     gulp.src("./dist/**/*.*")
-//         .pipe(gulp.dest("/Users/mac/Documents/company_work/2016QF/qqqyyybbb/beijing_qyb/QYB_New_iOS/NearQYB/Register/qyb_web/dist"));
-// })
-//
-// gulp.task('html2qybhtml', function () {
-//     gulp.src("./html/**/*.*")
-//         .pipe(gulp.dest("/Users/mac/Documents/company_work/2016QF/qqqyyybbb/beijing_qyb/QYB_New_iOS/NearQYB/Register/qyb_web/html"));
-// })
+gulp.task('dist2UYU_static', function () {
+    gulp.src("./dist/**/*.*")
+        .pipe(gulp.dest("/Users/mac/Desktop/lan_uyu/lan_github/uyu_stores/bin/static"));
+})
+gulp.task('dist2static', function () {
+    gulp.src("./dist/**/*.*")
+        .pipe(gulp.dest("./static"));
+})
 
-gulp.task('default', ['less2css', 'copy_js', 'compress_img']);
+gulp.task('html2UYU_template', function () {
+    gulp.src("./template/**/*.*")
+        .pipe(gulp.dest("/Users/mac/Desktop/lan_uyu/lan_github/uyu_stores/bin/template"));
+})
+
+gulp.task('default', ['less2css', 'copy_js', 'compress_img', 'dist2static', 'dist2UYU_static', 'html2UYU_template']);
 
