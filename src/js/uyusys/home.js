@@ -41,15 +41,15 @@ require(['../require-config'], function() {
                 //     });
                 // }
 
-
                 //注册点击事件
                 $(".js_goto_record").on("click", function () {
 
                     var openUrl = location.protocol + '//' + location.host + '/store/v1/page/dis_record.html'
                     if (window.WebViewJavascriptBridge !== "undefined") {
-                        alert("open_url");
                         var openUrlData ={
-                            url:openUrl
+                            url:openUrl,
+                            pullDown:"1",
+                            pullUp:"1"
                         };
                         native.openUrl(openUrlData, function (cb) {
                             console.log("call back");
@@ -65,7 +65,9 @@ require(['../require-config'], function() {
 
                     if (window.WebViewJavascriptBridge !== "undefined") {
                         var openUrlData ={
-                            url:openUrl
+                            url:openUrl,
+                            pullDown:"0",
+                            pullUp:"0"
                         };
                         native.openUrl(openUrlData, function (cb) {
                             console.log("call back");
@@ -80,7 +82,9 @@ require(['../require-config'], function() {
                     var openUrl = location.protocol + '//' + location.host + '/store/v1/page/bill.html'
                     if (window.WebViewJavascriptBridge !== "undefined") {
                         var openUrlData ={
-                            url:openUrl
+                            url:openUrl,
+                            pullDown:"1",
+                            pullUp:"1"
                         };
                         native.openUrl(openUrlData, function (cb) {
                             console.log("call back");
@@ -91,13 +95,13 @@ require(['../require-config'], function() {
                 });
 
 
-                //获取userid
-                native.getUserIdFromObjC({}, function (cb) {
-                    var store_user_id = cb['userid'];
+
+                function updateViewData(store_user_id) {
                     var getInfoData = {
                         se_userid: store_user_id,
                         userid: store_user_id
                     };
+
                     ajax_rule.ajax_rule('/store/v1/api/store_info', 'GET', 'json', getInfoData, '.zheceng', function (respData) {
                         $("#store_name").text(respData["store_name"]);
                         $("#store_left_times").text(respData["remain_times"]);
@@ -106,6 +110,16 @@ require(['../require-config'], function() {
                         $("#day_distribute").text(respData["d_train"]);
                         $("#day_earned_money").text(respData["d_amt"]);
                     });
+                }
+                //获取userid
+                native.getUserIdFromObjC({}, function (cb) {
+                    var store_user_id = cb['userid'];
+                    localStorage.setItem("userid", store_user_id);
+                    updateViewData(store_user_id);
+                });
+
+                native.updateCurrentView(function (resp) {
+                    updateViewData(localStorage.getItem("userid"));
                 });
 
             });

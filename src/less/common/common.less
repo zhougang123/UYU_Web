@@ -3,14 +3,14 @@
 @white:#ffffff;
 @input_color: #2F323A;
 @red: #ff0001;
-@orange: #FE9B20;
+@orange: #318D50;
 @border_color: #e5e5e5;
 @background_color: #F7F7F7;
-@orangebg_color: #ff9424;
+@orangebg_color: #318D50;
 @border_radius: 3px;
 @padding: 15px;
 @font_size: 15px;
-@home_color:#3A9C62;
+@home_color:#318D50;
 @images: '../img';
 body,
 p,
@@ -467,6 +467,7 @@ html body .ui-group-theme-a footer a.tex_c:visited {
     font-size: 17px;
     text-align: center;
     position: relative;
+    color: @home_color;
 }
 
 .alert_con_t span {
@@ -516,7 +517,7 @@ html body .ui-group-theme-a footer a.tex_c:visited {
 }
 
 .alert_con_close:hover {
-    background: orange;
+    background: @home_color;
 }
 
 .alert_con_foot {
@@ -814,6 +815,9 @@ body
 {
     -webkit-user-select:none;
     user-select:none;
+}
+[v-cloak] {
+    display: none;
 }
 
 

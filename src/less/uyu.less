@@ -27,7 +27,46 @@ section.section_list {
     }
   }
 }
-section.section_reglist {
+//=============================训练================================
+section.section_train_list
+{
+  .train_dev{
+    float: left;
+  }
+  .train_icon{
+    margin: 0.2rem @padding 0.2rem 0;
+    width: 1rem;
+    height: 1rem;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid @border_color;
+    overflow: hidden;
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  .train_info{
+    margin: 0.2rem auto;
+    span{
+      display: block;
+      text-align: left;
+      line-height: 0.5rem;
+    }
+  }
+  .train_time{
+    float: right;
+    margin: 0.2rem @padding;
+    span{
+      display: block;
+      text-align: right;
+      line-height: 1rem;
+    }
+  }
+
+}
+//=============================分配记录=============================
+section.section_record_list {
   li{
     height: 1.4rem;
   }
@@ -43,6 +82,10 @@ section.section_reglist {
     border-radius: 5px;
     border: 1px solid @border_color;
     overflow: hidden;
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 
   .record_times{
@@ -90,61 +133,85 @@ section.section_dev_list{
 }
 
 //======================  试光师  ============================
-section.section_master {
+section.section_eye_sight {
   li{
-    height: 1.4rem;
+    position: relative;
+    height: 1.6rem;
   }
-  .master_dev
-  {
-    float: left;
+  .eye_sight{
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    div{
+      float: left;
+    }
+    .eye_sight_icon{
+      width: 1rem;
+      height: 1rem;
+      margin-right: @padding;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+      border-radius:5px;
+      -webkit-border-radius: 5px;
+      border: 1px solid @border_color;
+      overflow: hidden;
+      img{
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    .eye_sight_info{
+      margin-top: 0.2rem;
+      span{
+        display: block;
+        line-height: 0.6rem;
+        text-align: left;
+      }
+    }
+
   }
-  .master_icon{
-    margin: 0.2rem @padding 0.2rem 0;
-    width: 1rem;
-    height: 1rem;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid @border_color;
-    overflow: hidden;
-  }
-  .master_name{
-    width: 50%;
-  }
-  .master_edit{
-    width: 20%;
-    height: 1.4rem;
-  }
-  span{
-    display: block;
-    line-height: 0.5rem;
-  }
-  .ma_name{
-    margin:0.2rem 0 0;
-  }
-  .edit_btn{
-    text-align: center;
-    line-height: 1.4rem;
+  .eye_sight_op{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    div{
+      float: right;
+    }
+    .eye_sight_cancel{
+      background-color: darkgrey;
+    }
+    .eye_sight_delete{
+      background-color: red;
+    }
+    span{
+      display: block;
+      color: green;
+      background-color: rgba(0,0,0,0);
+      width: 2rem;
+      text-align: center;
+      line-height: 1.6rem;
+    }
   }
 
 }
-
+//===============================账单===================================
 section.section_bill_list{
-  span{
-    margin: 0 auto;
-    display: block;
-    width: 40%;
-    line-height: 0.6rem;
-  }
-  .left_span{
+  .left_content{
     float: left;
     text-align: left;
   }
-  .right_span{
-    margin-right: @padding;
+  .right_content{
     float: right;
     text-align: right;
+    margin-right: @padding;
   }
-
+  p{
+    line-height: 0.8rem;
+  }
+  span{
+    color: @home_color;
+  }
 }
 
 section.distribute_find{
@@ -239,7 +306,6 @@ section.section_info {
     }
     dt {
       float: left;
-      width: 30%;
       position: relative;
       span.right_arrow {
         display: inline-block;
@@ -261,7 +327,7 @@ section.section_info {
     }
     dd {
       float: right;
-      width: 70%;
+      width: 60%;
       text-align: right;
       line-height: 1rem;
       input.text {

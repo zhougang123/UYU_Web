@@ -15,12 +15,11 @@
 <div id="wap" class="js_register_index">
     <section class="section_top">
         <div class="top_div left_head_div">
-            <!--默认头像-->
             <img src="../dist/img/ic_default_head.png">
         </div>
         <div class="top_div right_head_info">
-            <p id="store_name">风清扬{{store_name}}</p>
-            <p id="store_left_times">剩余可用次数: <span>{{store_left_times}}</span>次</p>
+            <p id="store_name">风清扬</p>
+            <p>剩余可用次数: <span id="store_left_times">0</span>次</p>
         </div>
         <div class="clearfix"></div>
     </section>
@@ -28,31 +27,33 @@
     <section class="section_mid">
         <div class="statistics statistics_month">
             <div class="stat_info statistics_title">本月</div>
-            <div class="v_line_dev"><div class="line"></div></div>
+            <div class="v_line_dev"></div>
             <div class="stat_info statistics_num">
                 <ul class="info_top">
                     <li>已分配</li>
-                    <li><span>{{month_distribute}}</span>次</li>
+                    <li><span id="month_distribute">0</span>次</li>
                 </ul>
                 <ul>
                     <li>收入</li>
-                    <li><span>{{month_earned_money}}</span>元</li>
+                    <li><span id="month_earned_money">0</span>元</li>
                 </ul>
             </div>
+            <div class="clearfix"></div>
         </div>
         <div class="statistics statistics_day">
             <div class="stat_info statistics_title">今日</div>
-            <div class="v_line_dev"><div class="line"></div></div>
+            <div class="v_line_dev"></div>
             <div class="stat_info statistics_num">
                 <ul class="info_top">
                     <li>已分配</li>
-                    <li><span>{{day_distribute}}</span>次</li>
+                    <li><span id="day_distribute">0</span>次</li>
                 </ul>
                 <ul>
                     <li>收入</li>
-                    <li><span>{{day_earned_money}}</span>元</li>
+                    <li><span id="day_earned_money">0</span>元</li>
                 </ul>
             </div>
+            <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
     </section>

@@ -1,4 +1,4 @@
-define(["jsbridge"], function(jsbridge) {　
+define(["jsbridge"], function(jsbridge) {
     var JSBridge = jsbridge.JSBridge;
 
     var getUserIdFromObjC = function(data, cb) {
@@ -31,9 +31,27 @@ define(["jsbridge"], function(jsbridge) {　
         })
     };
 
+    var updateCurrentView = function (cb) {
+        JSBridge.NativeCallH5({
+            name:"updateCurrentView",
+            callback:function (res) {
+                cb(res);
+            }
+        });
+    }
+    var pullUpRefresh = function (cb) {
+        JSBridge.NativeCallH5({
+            name:"pullUpRefresh",
+            callback:function (res) {
+                cb(res);
+            }
+        });
+    }
     return {
         alert:alert,
         openUrl:openUrl,
-        getUserIdFromObjC: getUserIdFromObjC
-    };　
+        getUserIdFromObjC:getUserIdFromObjC,
+        updateCurrentView:updateCurrentView,
+        pullUpRefresh:pullUpRefresh
+    };
 });
