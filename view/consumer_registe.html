@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>设备</title>
+    <title>账单</title>
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
@@ -13,22 +13,25 @@
     <link rel="stylesheet" href="/static/css/uyu.css">
 </head>
 <body>
+
 <div id="wap" class="js_regin_index">
-    <section class="section_list section_dev_list">
-        <ul class="js_one">
-            <li v-cloak v-for="dev in devices">
-                <span class="device_name">{{dev.device_name}}</span>
-                <span class="device_status">状态:{{dev.status}}</span>
+    <section class="section_list section_consumer_list">
+        <ul class="js_consumer">
+            <li>
+                <div class="consumer_icon"><img src="/static/img/ic_default_head.png"></div>
+                <div class="consumer_info">
+                    <span class="consumer_name">大力金刚王</span>
+                    <span class="create_date">创建时间14:32:26</span>
+                </div>
+                <div class="consumer_type">
+                    <span class="type">类型: 训练</span>
+                </div>
                 <div class="clearfix"></div>
             </li>
         </ul>
     </section>
-    <section class="section_nothing">
-        <p>门店还没有相关设备信息</p>
-    </section>
 
 </div>
-</body>
-<script src="/static/js/libs/require.2.3.3.min.js" type="text/javascript" data-main="/static/js/uyusys/dev.js" defer async="true"></script>
 
+</body>
 </html>
