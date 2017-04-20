@@ -475,3 +475,106 @@ section.section_nothing{
     text-align: center;
   }
 }
+//===============================忘记密码===================================
+
+section.section_header
+{
+  width: 100%;
+  padding: 0 0 0 @padding;
+  background: white;
+  margin: .3rem 0;
+  p{
+    width: 100%;
+    margin-top: 0.3rem;
+    line-height: 1rem;
+    text-align: left;
+  }
+}
+section.section_register{
+  width: 100%;
+  padding: 0 0 0 @padding;
+  box-sizing: border-box;
+  border-top: 1px solid @border_color;
+  border-bottom: 1px solid @border_color;
+  background: white;
+  margin: .3rem 0;
+
+  dl.hang{
+    width: 100%;
+    padding: 0.1rem @padding 0.1rem 0;
+    box-sizing: border-box;
+    border-top: 1px solid @border_color;
+    line-height: 1rem;
+    font-size: @font_size;
+    &:nth-child(1) {
+      border: 0;
+    }
+    &:after {
+      content: " ";
+      display: block;
+      font-size: 0;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      overflow: hidden;
+    }
+    dt {
+      float: left;
+      width: 30%;
+    }
+    dd {
+      float: right;
+      width: 70%;
+      text-align: left;
+      line-height: 1rem;
+      input.text {
+        width: 100%;
+        background: none;
+        border: 0;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: left;
+        font-size: @font_size;
+        float:left;
+      }
+      input.text_sms{
+        width: 60%;
+        background: none;
+        border: 0;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: left;
+        font-size: @font_size;
+        float:left;
+      }
+      p{
+        float:right;
+        margin-top: 0.1rem;
+
+      }
+      p.entycode {
+        width: 38%;
+        display: inline-block;
+        border: 1px solid @home_color;
+        border-radius: @border_radius;
+        color: @home_color;
+        text-align: center;
+        height: .8rem;
+        line-height: .8rem;
+        span.get_entycode {
+          width: 100%;
+          font-size: 13px;
+        }
+        span.show_entycode {
+          display: none;
+          width: 100%;
+          font-size: 13px;
+        }
+      }
+      &:after{
+        float: none;
+      }
+    }
+  }
+
+}
